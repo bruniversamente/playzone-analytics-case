@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.next/
+.expo/
+.DS_Store
+Thumbs.db
+
+.env
+.env.*
+*.pem
+*.p12
+*.keystore
+*.jks
+
+.vscode/
+.idea/
