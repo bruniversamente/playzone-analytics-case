@@ -29,9 +29,3 @@ Uso IA como acelerador (boilerplate, variações, refactors), mas mantenho respo
 - docs/analytics-case.md: tracking plan, KPIs e leitura do negócio
 - sql/01_core_analysis.sql: funil sequencial, coortes, liquidez e efeito-rede (GA4 BigQuery export)
 - snippets/: trechos sanitizados (sem env, chaves, URLs privadas)
-
-## Screenshots
-Coloque prints em `dashboards/` e linke aqui (você pode adicionar depois).
-- ![Funnel](dashboards/funnel.png)
-- ![Cohorts](dashboards/cohorts.png)
-- ![Liquidity](dashboards/liquidity.png)
