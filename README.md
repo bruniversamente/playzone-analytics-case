@@ -10,6 +10,7 @@ Evidência de escopo (contagens auditáveis do repo): docs/repo-metrics.md
 - Queries SQL no schema do GA4 BigQuery export (funis, coortes, retenção e core loop de partidas)
 - Snippets sanitizados (pure functions) de motores matemáticos e tracking guardrails
 - Checklist de segurança para publicar sem vazar segredos
+- Trilhas por cargo (Product Analyst, BI Analyst, Growth Analyst): docs/track-*.md
 
 ## Stack (alto nível)
 - Mobile: React Native (Expo), TypeScript
@@ -34,6 +35,9 @@ A ativação é controlada por variante de ambiente (dev = log-only; staging/pro
 - docs/event-dictionary.md: eventos, parâmetros, tipos e call-sites (auto-gerado do código)
 - sql/01_core_analysis.sql: funil sequencial, coortes, liquidez e efeito-rede (GA4 BigQuery export)
 - snippets/: trechos sanitizados (sem env, chaves, URLs privadas)
+- docs/track-product-analyst.md: leitura do case para Product Analyst
+- docs/track-bi-analyst.md: leitura do case para BI Analyst
+- docs/track-growth-analyst.md: leitura do case para Growth Analyst
 
 ## Como rodar as queries (BigQuery)
 As queries em `sql/01_core_analysis.sql` usam um placeholder de dataset:
