@@ -6,8 +6,8 @@ Evidência de escopo (contagens auditáveis do repo): docs/repo-metrics.md
 
 ## O que tem aqui
 - Arquitetura do produto (mobile + backend serverless + banco)
-- Tracking plan (eventos core governados no TypeScript)
-- Queries SQL no schema do GA4 BigQuery export (funis, coortes, retenção e liquidez de marketplace)
+- Tracking plan governado no TypeScript + dicionário de eventos auto-gerado
+- Queries SQL no schema do GA4 BigQuery export (funis, coortes, retenção e core loop de partidas)
 - Snippets sanitizados (pure functions) de motores matemáticos e tracking guardrails
 - Checklist de segurança para publicar sem vazar segredos
 
@@ -23,9 +23,14 @@ Em produtos digitais, o dado nasce no código. Aqui eu tratei instrumentação e
 ## AI-assisted development (método)
 Uso IA como acelerador (boilerplate, variações, refactors), mas mantenho responsabilidade técnica: arquitetura, revisão, refatoração, validação e testes. O objetivo é velocidade com consistência, sem delegar decisões críticas.
 
+## Estado do tracking
+O tracking está implementado no código com governança (allowlist + coerção de tipos + dicionário auto-gerado).  
+A ativação é controlada por variante de ambiente (dev = log-only; staging/prod = envio habilitado), conforme documentado no `docs/event-dictionary.md`.
+
 ## Como navegar
 - docs/repo-metrics.md: métricas do repositório e como foram medidas
 - docs/product-architecture.md: visão de arquitetura e trade-offs
 - docs/analytics-case.md: tracking plan, KPIs e leitura do negócio
+- docs/event-dictionary.md: eventos, parâmetros, tipos e call-sites (auto-gerado do código)
 - sql/01_core_analysis.sql: funil sequencial, coortes, liquidez e efeito-rede (GA4 BigQuery export)
 - snippets/: trechos sanitizados (sem env, chaves, URLs privadas)
