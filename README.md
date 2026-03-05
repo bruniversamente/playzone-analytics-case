@@ -34,3 +34,12 @@ A ativação é controlada por variante de ambiente (dev = log-only; staging/pro
 - docs/event-dictionary.md: eventos, parâmetros, tipos e call-sites (auto-gerado do código)
 - sql/01_core_analysis.sql: funil sequencial, coortes, liquidez e efeito-rede (GA4 BigQuery export)
 - snippets/: trechos sanitizados (sem env, chaves, URLs privadas)
+
+## Como rodar as queries (BigQuery)
+As queries em `sql/01_core_analysis.sql` usam um placeholder de dataset:
+
+`your-project.analytics_123456789.events_*`
+
+Para executar no seu BigQuery, substitua pelo seu endereço real no formato:
+
+`PROJECT_ID.analytics_XXXXXXXXX.events_*`
